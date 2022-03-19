@@ -1,0 +1,8 @@
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+
+
+body.home {
+  background-color: $veryDarkBlue;
+}

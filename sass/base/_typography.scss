@@ -1,0 +1,13 @@
+
+@use 'abstracts/functions';
+
+$rubik: 'Rubik', sans-serif;
+
+h1,h2,h3,h4,h5,h6,a,li,span,p {
+  font-family: $rubik;
+}
+
+p {
+  font-size: rem(18);
+}
+

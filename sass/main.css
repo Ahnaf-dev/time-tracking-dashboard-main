@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@use 'abstracts/functions';
+@use 'abstracts/functions';
+@use 'abstracts/functions';
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+@use 'abstracts/functions';
+.cards-section {
+  padding: 6.25rem 0;
+}
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+.grid {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1.875rem;
+}
+
+@media (min-width: 50rem) {
+  .grid {
+    gap: 1.875rem;
+    -ms-grid-columns: (minmax(21.875rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
+  }
+}
+
+@media (min-width: 75rem) {
+  .grid .avatar-card {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+}
+
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+.avatar-card {
+  border-radius: 1.25rem;
+  background-color: #1c1f4a;
+}
+
+.avatar-card__header .avatar-card__display {
+  background-color: #5847eb;
+  border-radius: 1.25rem;
+  padding: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 75rem) {
+  .avatar-card__header .avatar-card__display {
+    display: block;
+    padding-bottom: 11.25rem;
+  }
+}
+
+.avatar-card__header .avatar-card__display__image {
+  width: 6.25rem;
+  margin-right: 1.5625rem;
+}
+
+@media (min-width: 75rem) {
+  .avatar-card__header .avatar-card__display__image {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.avatar-card__header .avatar-card__display__image--round {
+  border: 0.25rem solid white;
+  border-radius: 100%;
+}
+
+.avatar-card__header .avatar-card__display__name__text {
+  color: #bdc1ff;
+  font-weight: 300;
+}
+
+.avatar-card__header .avatar-card__display__name__text--lg {
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: white;
+}
+
+@media (min-width: 75rem) {
+  .avatar-card__header .avatar-card__display__name__text--lg {
+    font-size: 4.0625rem;
+    max-width: 1.875rem;
+    line-height: 1.3;
+  }
+}
+
+.avatar-card__header .avatar-card__time-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5625rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+@media (min-width: 75rem) {
+  .avatar-card__header .avatar-card__time-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.875rem;
+  }
+}
+
+.avatar-card__header .avatar-card__time-text__text {
+  color: #bdc1ff;
+  cursor: pointer;
+}
+
+.avatar-card__header .active {
+  color: white;
+}
+
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+@use 'abstracts/placeholders';
+@use 'abstracts/mixins';
+.card, .card--work, .card--play, .card--study, .card--exercise, .card--social, .card--care {
+  padding-top: 2.5rem;
+  border-radius: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.25rem;
+}
+
+.card__body {
+  background-color: #1c1f4a;
+  padding: 1.875rem;
+  border-radius: 1.25rem;
+  height: 100%;
+}
+
+.card__body--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 50rem) {
+  .card__body--flex:last-child {
+    display: block;
+  }
+}
+
+.card__body__title {
+  color: white;
+  font-weight: 400;
+}
+
+.card__body__text__dots {
+  font-size: 2.5rem;
+  color: #bdc1ff;
+  text-align: center;
+}
+
+.card__body__text {
+  color: #bdc1ff;
+}
+
+.card__body__text--lg {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 300;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+@media (min-width: 50rem) {
+  .card__body__text--lg {
+    font-size: 4.375rem;
+  }
+}
+
+.card--work {
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+}
+
+.card--play {
+  background-color: #56c2e6;
+  background-image: url("../images/icon-play.svg");
+}
+
+.card--study {
+  background-color: #ff5c7c;
+  background-image: url("../images/icon-study.svg");
+}
+
+.card--exercise {
+  background-color: #4acf81;
+  background-image: url("../images/icon-exercise.svg");
+}
+
+.card--social {
+  background-color: #7536d3;
+  background-image: url("../images/icon-social.svg");
+}
+
+.card--care {
+  background-color: #f1c65b;
+  background-image: url("../images/icon-self-care.svg");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@use 'abstracts/functions';
+h1, h2, h3, h4, h5, h6, a, li, span, p {
+  font-family: "Rubik", sans-serif;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+body.home {
+  background-color: #0f1424;
+}
+/*# sourceMappingURL=main.css.map */

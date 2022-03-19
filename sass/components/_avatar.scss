@@ -1,0 +1,87 @@
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+
+.avatar-card {
+  border-radius: rem(20);
+  background-color: $darkBlue;
+
+  &__header {
+
+    .avatar-card__display {
+      background-color: $blue;
+      border-radius: rem(20);
+      padding: rem(50);
+      display: flex;
+      align-items: center;
+
+      @include lg {
+        display: block;
+        padding-bottom: rem(180);
+      }
+
+      &__image {
+        width: rem(100);
+        margin-right: rem(25);
+
+        @include lg {
+          margin-bottom: rem(50);
+        }
+  
+      }
+
+      &__image--round {
+        border: rem(4) solid white;
+        border-radius: 100%;
+      }
+      
+      &__name {
+          &__text {
+            color: $paleBlue;
+            font-weight: 300;
+          }
+
+          &__text--lg {
+            font-size: rem(30);
+            font-weight: 300;
+            color: white;
+            
+
+            @include lg {
+              font-size: rem(65);
+              max-width: rem(30);
+              line-height: 1.3;
+            }
+      
+          }
+      }
+    }
+
+    .avatar-card__time-text {
+      display: flex;
+      padding: rem(25);
+      justify-content: space-between;
+      transition: 0.4s ease-in;
+      
+
+      @include lg {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+      }
+
+      &__text {
+        color: $paleBlue;
+        cursor: pointer;
+      }
+    }
+
+    .active {
+      color: white;
+
+    }
+
+  }
+}

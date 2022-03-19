@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+// abstracts
+@import 'abstracts/functions';
+@import 'abstracts/placeholders';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// layout
+@import 'layout/container';
+@import 'layout/card-section';
+@import 'layout/grid';
+
+// components
+@import 'components/avatar';
+@import 'components/card';
+// base
+@import 'base/reset';
+@import 'base/typography';
+
+// pages
+@import 'pages/home';

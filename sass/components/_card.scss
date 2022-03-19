@@ -1,0 +1,99 @@
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/functions';
+@use 'abstracts/placeholders';
+@use 'abstracts/mixins';
+
+
+%card {
+  padding-top: rem(40);
+  border-radius: $border;
+  background-repeat: no-repeat;
+  background-position: top rem(-10) right rem(20);
+}
+.card {
+  @extend %card;
+  &__body {
+    background-color: $darkBlue;
+    padding: rem(30);
+    border-radius: $border;
+    height: 100%;
+    &--flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+  
+    }
+    
+    @include md {
+      &--flex:last-child {
+        display: block;
+      }
+
+    }
+
+    &__title {
+      color: white;
+      font-weight: 400;
+
+     
+    }
+
+    &__text__dots {
+      font-size: rem(40);
+      color: $paleBlue;
+      text-align: center;
+    }
+
+    &__text {
+      color: $paleBlue;
+      // display: inline;
+      
+      &--lg {
+        font-size: rem(40);
+        color: white;
+        font-weight: 300;
+        transition: 0.4s ease-in;
+        @include md {
+          font-size: rem(70);
+        }
+      }
+    }
+  }
+}
+
+.card--work {
+  @extend %card;
+  background-color: $lightRed;
+  background-image: url('../images/icon-work.svg');
+}
+
+.card--play {
+  @extend %card;
+  background-color: $softBlue;
+  background-image: url('../images/icon-play.svg')
+}
+.card--study {
+  @extend %card;
+  background-color: $studyRed;
+  background-image: url('../images/icon-study.svg')
+}
+
+.card--exercise {
+  @extend %card;
+  background-color: $limeGreen;
+  background-image: url('../images/icon-exercise.svg')
+}
+
+.card--social {
+  @extend %card;
+  background-color: $violet;
+  background-image: url('../images/icon-social.svg')
+}
+
+.card--care {
+  @extend %card;
+  background-color: $softOrange;
+  background-image: url('../images/icon-self-care.svg')
+}
